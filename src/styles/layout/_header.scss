@@ -1,14 +1,13 @@
 @use '../abstracts' as *;
 
 header {
-  padding: 24px;
+  padding: 24px 32px;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 999;
-  transition: all .3s ease-in-out;
-  background-color: pink;
+  transition: all .7s cubic-bezier(0.22, 1, 0.36, 1);
 
   .header-content {
     display: flex;
