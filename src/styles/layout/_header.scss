@@ -1,0 +1,37 @@
+@use '../abstracts' as *;
+
+header {
+  padding: 24px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  transition: all .3s ease-in-out;
+  background-color: pink;
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &.scrolled {
+      background-color: $clr-white;
+      box-shadow: 0 2px 6px 0 rgba(22, 29, 91, .15),
+      0 8px 24px 0 rgba(22, 29, 91, .10);
+      
+      &.scrolled .btn {
+          background-color: $clr-turquoise;
+          color: $clr-navy;
+  
+          &:hover {
+              background-color: $clr-turquoise-dark;
+          }
+      }
+  }
+
+}
+
+body {
+  min-height: 200vh;
+}

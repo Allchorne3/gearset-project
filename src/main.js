@@ -1,16 +1,19 @@
 import "./styles/main.scss"
 
-const fish = {
-    cat: 1, 
-    dog: 2,
-    shark: 3
-}
+$(document).ready(function(){
+  
+    const header = $('header');
 
-const animals = {
-    ...fish,
-    penguin: 1
-}
+    // ANYTHING ON SCROLL
+    $(window).scroll(() => {
 
-console.log('Hello!')
-console.log('Again!')
-console.log(animals)
+        // Add class to header and button inside
+        if($(window).scrollTop() > 50) {
+            header.addClass('scrolled')
+        } else {
+            header.removeClass('scrolled')
+        }
+
+    })
+
+});
