@@ -1,0 +1,78 @@
+@use '../abstracts' as *;
+
+#devops-standards {
+    padding: 96px 32px;
+
+    @include respond-to('medium') {
+        padding: 72px 32px;
+    }
+    
+    .container--small {
+        margin-bottom: 100px;
+
+        h2 {
+            padding: 0 10px;
+        }
+
+        p {
+            margin-bottom: 50px;
+        }
+
+    }
+
+    .slick-slides {
+        margin-top: 90px;
+    
+        /* Slides */
+        .slick-slide {
+            padding: 20px 10px;
+    
+            &_inner {
+                background-color: $clr-white;
+                height: 372px;
+                padding: 75px 32px 48px;
+                border-radius: 32px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+    
+                figure {
+                    max-width: 252px;
+                    width: 100%;
+                    display: flex;
+                    place-items: center;
+    
+                    img {
+                        width: 252px;
+                    }
+                }       
+            
+                h3 {
+                    margin-bottom: 13px;
+                }
+            }
+    
+        }
+    
+        /* Slider Buttons */
+    
+        .slick-prev, .slick-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            z-index: 99;
+        }
+    
+        .slick-prev {
+            left: -80px;
+        }
+    
+        .slick-next {
+            right: -80px;
+        }
+    
+    }
+
+}

@@ -16,4 +16,7 @@ $(document).ready(function(){
 
     })
 
+    // Change year in the footer dynamically
+    $('.year').text(new Date().getFullYear());
+
 });
