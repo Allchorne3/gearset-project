@@ -1,0 +1,57 @@
+@use '../abstracts' as *;
+
+#about-us {
+    background-color: $clr-faded-turquoise;
+    padding: 72px 32px;
+
+    @include respond-to('medium') {
+        padding: 0;
+    }
+
+    .about-us_content {
+        display: flex;
+        justify-content: space-between;
+
+        @include respond-to('medium') {
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-items: center;
+            text-align: center;
+        }
+
+        &-left { 
+            display: grid;
+            align-items: center;
+            margin-right: 40px;
+
+            @include respond-to('medium') {
+                margin-right: 0;
+            }
+            
+            figure {
+                img {
+                    max-width: 580px;
+                    width: 100%;
+
+                    @include respond-to('medium') {
+                        max-width: 100%;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        
+        &-right {
+            display: grid;
+            align-content: center;
+            justify-content: end;
+            max-width: 480px;
+
+            @include respond-to('medium') {
+                padding: 48px 32px 72px;
+            }
+            
+        }
+
+    }
+}

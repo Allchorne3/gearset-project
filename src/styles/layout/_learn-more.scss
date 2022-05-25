@@ -1,0 +1,17 @@
+@use '../abstracts' as *;
+
+#learn-more {
+    padding: 96px 32px;
+    background-color: $clr-turquoise;
+
+    @include respond-to('medium') {
+        padding: 72px 32px 96px;
+    }
+
+    .container--small {
+        p {
+            margin-bottom: 70px;
+        }
+    }
+
+}

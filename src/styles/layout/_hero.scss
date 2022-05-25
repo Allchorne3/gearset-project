@@ -9,7 +9,7 @@
 
   .hero-content {
     width: 100%;
-    background: linear-gradient(to top, $clr-white, rgba(255,255,255,0));
+    background: linear-gradient(rgba(255,255,255,0) 55%, $clr-white);
     padding: 194px 32px 320px;
     
     @include respond-to('large') {
@@ -36,6 +36,7 @@
             font-size: 55px;
             margin-bottom: 40px;
           }
+          
           @include respond-to('medium') {
             font-size: 48px;
             line-height: 1.2;

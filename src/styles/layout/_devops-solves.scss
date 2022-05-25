@@ -1,0 +1,59 @@
+@use '../abstracts' as *;
+#devops-solved {
+    background-color: $clr-white;
+    padding: 0 32px 96px;
+
+    .devops-benefits {
+        // display: grid;
+        // grid-template-columns: repeat(3, 1fr);
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        margin-top: 136px;
+
+        @include respond-to('medium') {
+            flex-direction: column;
+        }
+        
+        .devops-benefit {
+            padding: 32px;
+            background: $clr-white;
+            border-radius: 32px;
+            flex: 1;
+
+            &:not(:last-child) {
+                @include respond-to('medium') {
+                    margin-bottom: 96px;
+                }
+            }
+
+            figure {
+                margin-top: -106px;
+                text-align: center;
+                // max-width: 50%;
+                margin-bottom: 32px;
+
+                img {
+                    max-width: 100%;
+                }
+                
+            }
+
+            h3 {
+                margin-top: auto;
+                margin-bottom: 13px;
+
+                @include respond-to('large') {
+                    font-size: 20px;
+                }
+
+                @include respond-to('small') {
+                    font-size: 24px;
+                }
+            }
+
+        }
+    
+    }
+
+}
