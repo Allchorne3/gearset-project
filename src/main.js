@@ -1,4 +1,7 @@
 import "./styles/main.scss"
+import $ from 'jquery';
+// window.$ = window.jQuery = $;
+import 'slick-carousel'
 
 $(document).ready(function(){
   
@@ -15,6 +18,13 @@ $(document).ready(function(){
         }
 
     })
+
+    // Slick Slider
+    $('.slick-slides').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1
+    });
 
     // Change year in the footer dynamically
     $('.year').text(new Date().getFullYear());
