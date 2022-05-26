@@ -82,7 +82,7 @@
         padding-left: 20px;
 
         figure {
-          img {
+          svg {
             transition: transform .2s linear;
             @include respond-to('desktop') {
               max-width: 500px;

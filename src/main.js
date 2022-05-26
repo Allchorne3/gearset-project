@@ -19,19 +19,19 @@ function headerScrolled() {
     }
 }
 
-$('body').on("mousemove", function(e){
-  const speed = 80
-  const mouseX = (e.pageX / speed)
-  const mouseY = (e.pageY / speed)
-
-  $('.hero-inner_right figure img').css({
-    'transform': 'translate(-' + mouseX + 'px, -' + mouseY + 'px)'
-  })
-
-})
-
 $(document).ready(function(){
     headerScrolled()
+
+    $('body').on("mousemove", function(e){
+      const speed = 80
+      const mouseX = (e.pageX / speed)
+      const mouseY = (e.pageY / speed)
+    
+      $('.hero-inner_right figure svg').css({
+        'transform': 'translate(-' + mouseX + 'px, -' + mouseY + 'px)'
+      })
+    
+    })
 
     // ANYTHING ON SCROLL
     $(window).on("scroll", () => {
@@ -65,6 +65,13 @@ $(document).ready(function(){
     });
 
     // GSAP
+
+    // Hero
+    let tlh = gsap.timeline()
+    tlh.from(".hero-inner_left h1", { y: 20, opacity: 0, duration: 1})
+       .from(".hero-inner_left p", { y: 20, opacity: 0, duration: 0.7}, "-=0.5")
+       .from(".hero-inner_left a", { y: 20, opacity: 0, duration: 0.7}, "-=0.3")  
+       .from(".hero-inner_right svg", {scale: 0.95, opacity: 0, duration: 0.7}, "-=1")  
 
     // DevOps Solved
     let tl = gsap.timeline({
