@@ -12,18 +12,22 @@
     background: linear-gradient(rgba(255,255,255,0) 55%, $clr-white);
     padding: 194px 32px 320px;
     
-    @include respond-to('large') {
+    @include respond-to('desktop') {
       padding: 150px 32px 220px;      
     }
 
-    @include respond-to('medium') {
+    @include respond-to('tablet') {
      padding: 136px 32px 129px 
+    }
+
+    @include respond-to('phone') {
+      padding-inline: 20px;
     }
 
     &_inner {
       display: flex;
 
-      @include respond-to('medium') {
+      @include respond-to('tablet') {
         flex-direction: column-reverse;
       }
 
@@ -32,14 +36,19 @@
         h1 {
           margin-bottom: 50px;
 
-          @include respond-to('large') {
+          @include respond-to('desktop') {
             font-size: 55px;
             margin-bottom: 40px;
           }
           
-          @include respond-to('medium') {
+          @include respond-to('tablet') {
             font-size: 48px;
             line-height: 1.2;
+          }
+
+          @include respond-to('phone') {
+            font-size: 48px;
+            line-height: 1.1;
           }
         }
         
@@ -49,18 +58,18 @@
           max-width: 500px;
           margin-bottom: 60px;
 
-          @include respond-to('large') {
+          @include respond-to('desktop') {
             font-size: 24px;
             line-height: 1.7;
             margin-bottom: 50px;
           }
 
-          @include respond-to('medium') {
+          @include respond-to('tablet') {
             max-width: 100%;
           }
         } 
 
-        @include respond-to('medium') {
+        @include respond-to('tablet') {
           text-align: center;
         }
       }
@@ -75,17 +84,17 @@
         figure {
           img {
             transition: transform .2s linear;
-            @include respond-to('large') {
+            @include respond-to('desktop') {
               max-width: 500px;
             }
 
-            @include respond-to('small') {
+            @include respond-to('tablet-portait') {
               max-width: 100%;
             }
           }
         }
 
-        @include respond-to('medium') {
+        @include respond-to('tablet') {
           justify-content: center;
           padding: 0 0 40px;
         }

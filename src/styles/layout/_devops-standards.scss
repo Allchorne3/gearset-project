@@ -3,11 +3,11 @@
 #devops-standards {
     padding: 96px 32px;
 
-    @include respond-to('medium') {
+    @include respond-to('tablet') {
         padding: 72px 32px;
     }
 
-    @include respond-to('small') {
+    @include respond-to('tablet-portait') {
         padding: 72px 32px 40px;
     }
     
@@ -22,7 +22,7 @@
             margin-bottom: 50px;
         }
 
-        @include respond-to('small') {
+        @include respond-to('tablet-portait') {
             margin-bottom: 0;
         }
 
@@ -31,7 +31,7 @@
     .carousel-slides {
         margin-top: 90px;
 
-        @include respond-to('small') {
+        @include respond-to('tablet-portait') {
             margin-top: 56px;
         }
     
@@ -39,8 +39,12 @@
         .slick-slide {
             padding: 20px 10px;
 
-            @include respond-to('small') {
+            @include respond-to('tablet-portait') {
                 padding: 20px;
+            }
+
+            @include respond-to('phone') {
+                padding: 10px;
             }
     
             &_inner {
@@ -53,7 +57,7 @@
                 align-items: center;
                 justify-content: space-between;
 
-                @include respond-to('small') {
+                @include respond-to('tablet-portait') {
                     padding: 61px 32px 48px;
                 }
     
@@ -67,7 +71,7 @@
                     img {
                         width: 252px;
 
-                        @include respond-to('small') {
+                        @include respond-to('tablet-portait') {
                             width: 209px;
                         }
 
@@ -97,11 +101,14 @@
         .slick-prev {
             left: -40px;
             
-            @include respond-to('xlarge') {
+            @include respond-to('lg-desktop') {
                 left: -20px;
             }
-            @include respond-to('small') {
+            @include respond-to('tablet-portait') {
                 left: -3px;
+            }
+            @include respond-to('phone') {
+                left: -13px;
             }
 
         }
@@ -109,11 +116,14 @@
         .slick-next {
             right: -40px;
             
-            @include respond-to('xlarge') {
+            @include respond-to('lg-desktop') {
                 right: -20px;
             }
-            @include respond-to('small') {
+            @include respond-to('tablet-portait') {
                 right: -3px;
+            }
+            @include respond-to('phone') {
+                right: -13px;
             }
             
         }
@@ -121,7 +131,7 @@
         .slick-prev,
         .slick-next {
             img {
-                @include respond-to('xlarge') {
+                @include respond-to('lg-desktop') {
                     width: 12px;
                 }
             }

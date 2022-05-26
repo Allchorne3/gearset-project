@@ -1,8 +1,9 @@
 $breakpoints: (
-  'small':  650px,
-  'medium': 999px,
-  'large':  1150px,
-  'xlarge':  1300px
+  'phone':  450px,
+  'tablet-portait':  650px,
+  'tablet': 999px,
+  'desktop':  1150px,
+  'lg-desktop':  1300px
 );
 
 /// @param {String} $breakpoint - Breakpoint name   

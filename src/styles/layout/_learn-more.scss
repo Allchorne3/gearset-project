@@ -4,7 +4,7 @@
     padding: 96px 32px;
     background-color: $clr-faded-turquoise;
 
-    @include respond-to('medium') {
+    @include respond-to('tablet') {
         padding: 72px 32px 96px;
     }
 

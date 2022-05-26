@@ -9,9 +9,25 @@ header {
   z-index: 999;
   transition: all .7s cubic-bezier(0.22, 1, 0.36, 1);
 
+  @include respond-to('phone') {
+    padding: 15px;
+  }
+
   .header-content {
     display: flex;
     justify-content: space-between;
+
+    @include respond-to('phone') {
+      img {
+        max-width: 130px;
+      }
+      .btn {
+        font-size: 13px;
+        padding: 10px 27px;
+      }
+    }
+
+
   }
 
   &.scrolled {
@@ -29,8 +45,4 @@ header {
       }
   }
 
-}
-
-body {
-  min-height: 200vh;
 }
