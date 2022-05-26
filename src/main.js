@@ -19,11 +19,22 @@ function headerScrolled() {
     }
 }
 
+$('body').on("mousemove", function(e){
+  const speed = 80
+  const mouseX = (e.pageX / speed)
+  const mouseY = (e.pageY / speed)
+
+  $('.hero-inner_right figure img').css({
+    'transform': 'translate(-' + mouseX + 'px, -' + mouseY + 'px)'
+  })
+
+})
+
 $(document).ready(function(){
     headerScrolled()
 
     // ANYTHING ON SCROLL
-    $(window).scroll(() => {
+    $(window).on("scroll", () => {
         // Add class to header and button inside
         headerScrolled()
     })
@@ -81,16 +92,16 @@ $(document).ready(function(){
       tl2.from("#devops-standards .container--small h2", { y: 20, opacity: 0, duration: 0.7})
          .from("#devops-standards .container--small p", { y: 20, opacity: 0, duration: 0.7}, "-=0.3")
          .from("#devops-standards .container--small a", { y: 40, opacity: 0, duration: 0.7}, "-=0.5")
-         .from("#devops-standards .slick-slider .slick-slide", { y: 20, opacity: 0, duration: 1, stagger: 0.25}, "-=0.5")
+         .from("#devops-standards .slick-slider .slick-slide", { y: 20, opacity: 0, duration: 0.7, stagger: 0.25}, "-=1.2")
       
       // Learn More
       let tl3 = gsap.timeline({
-        scrollTrigger: {trigger: '#learn__more', start: "30% bottom"}
+        scrollTrigger: {trigger: '#learn-more', start: "30% bottom"}
       })
   
-      tl3.from("#learn__more h2", {opacity: 0, duration: 0.7})
-         .from("#learn__more p", {opacity: 0, duration: 0.7}, "-=0.3")
-         .from("#learn__more a", {opacity: 0, duration: 0.7}, "-=0.3")
+      tl3.from("#learn-more h2", {opacity: 0, duration: 0.7})
+         .from("#learn-more p", {opacity: 0, duration: 0.7}, "-=0.3")
+         .from("#learn-more a", {opacity: 0, duration: 0.7}, "-=0.3")
 
     // Change year in the footer dynamically
     $('.year').text(new Date().getFullYear());

@@ -74,6 +74,7 @@
 
         figure {
           img {
+            transition: transform .2s linear;
             @include respond-to('large') {
               max-width: 500px;
             }
