@@ -27,7 +27,7 @@ $(document).ready(function(){
       const mouseX = (e.pageX / speed)
       const mouseY = (e.pageY / speed)
     
-      $('.hero-inner_right figure svg').css({
+      $('.hero-inner_right figure img').css({
         'transform': 'translate(-' + mouseX + 'px, -' + mouseY + 'px)'
       })
     
@@ -71,7 +71,7 @@ $(document).ready(function(){
     tlh.from(".hero-inner_left h1", { y: 20, opacity: 0, duration: 1})
        .from(".hero-inner_left p", { y: 20, opacity: 0, duration: 0.7}, "-=0.5")
        .from(".hero-inner_left a", { y: 20, opacity: 0, duration: 0.7}, "-=0.3")  
-       .from(".hero-inner_right svg", {scale: 0.95, opacity: 0, duration: 0.7}, "-=1")  
+       .from(".hero-inner_right img", {scale: 0.95, opacity: 0, duration: 0.7}, "-=1")  
 
     // DevOps Solved
     let tl = gsap.timeline({
@@ -85,9 +85,10 @@ $(document).ready(function(){
     let tl1 = gsap.timeline({
       scrollTrigger: {trigger: '#about-us', start: "center bottom"}
     })
-    tl1.from(".about-us_content-left figure", {y: 30, opacity: 0, duration: 1})
+    tl1.to(".about-us_content-left figure", {clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',transform: 'scale(1)', duration: 1})
+       .from(".about-us_content-left figure img", {transform: 'scale(1.4)', duration: 2}, "-=1.3")
        .from(".about-us_content-right h2", { y: 30, opacity: 0, duration: 1}, "-=1.3")
-       .from(".about-us_content-right p", { y: 30, opacity: 0, duration: 1}, "-=0.7")
+       .from(".about-us_content-right p", { y: 30, opacity: 0, duration: 1}, "-=0.9")
           
       // DevOps Standards
     let tl2 = gsap.timeline({
@@ -96,7 +97,13 @@ $(document).ready(function(){
     tl2.from("#devops-standards .container--small h2", { y: 20, opacity: 0, duration: 0.7})
        .from("#devops-standards .container--small p", { y: 20, opacity: 0, duration: 0.7}, "-=0.3")
        .from("#devops-standards .container--small a", { y: 40, opacity: 0, duration: 0.7}, "-=0.5")
-       .from("#devops-standards .slick-slider .slick-slide", { y: 20, opacity: 0, duration: 0.7, stagger: 0.1}, "-=1.2")
+
+    // DevOps Standards Slider
+    let tls = gsap.timeline({
+        scrollTrigger: {trigger: '.carousel-slides', start: "10% bottom"}
+    })
+    tls.from("#devops-standards .slick-slider .slick-slide", { y: 20, opacity: 0, duration: 0.7, stagger: 0.1}, "-=2")
+       .from("#devops-standards .carousel-slides .slick-arrow", { opacity: 0, duration: 1.2}, "-=2")
       
       // Learn More
     let tl3 = gsap.timeline({

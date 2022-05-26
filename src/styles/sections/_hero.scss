@@ -20,6 +20,10 @@
      padding: 136px 32px 129px 
     }
 
+    @include respond-to('tablet-portrait') {
+      background: linear-gradient(rgba(255,255,255,0) 65%, $clr-white);
+    }
+
     @include respond-to('phone') {
       padding-inline: 20px;
     }
@@ -82,13 +86,13 @@
         padding-left: 20px;
 
         figure {
-          svg {
+          img {
             transition: transform .2s linear;
             @include respond-to('desktop') {
               max-width: 500px;
             }
 
-            @include respond-to('tablet-portait') {
+            @include respond-to('tablet-portrait') {
               max-width: 100%;
             }
           }

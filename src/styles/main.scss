@@ -13,10 +13,10 @@
 @use 'components/slider';
 
 // Layout
-@use 'layout/header';
-@use 'layout/hero';
-@use 'layout/devops-solves';
-@use 'layout/devops-standards';
-@use 'layout/about-us';
-@use 'layout/learn-more';
-@use 'layout/footer';
+@use 'sections/header';
+@use 'sections/hero';
+@use 'sections/devops-solved';
+@use 'sections/devops-standards';
+@use 'sections/about-us';
+@use 'sections/learn-more';
+@use 'sections/footer';

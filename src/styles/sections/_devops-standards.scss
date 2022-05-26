@@ -7,7 +7,7 @@
         padding: 72px 32px;
     }
 
-    @include respond-to('tablet-portait') {
+    @include respond-to('tablet-portrait') {
         padding: 72px 32px 40px;
     }
     
@@ -22,7 +22,7 @@
             margin-bottom: 50px;
         }
 
-        @include respond-to('tablet-portait') {
+        @include respond-to('tablet-portrait') {
             margin-bottom: 0;
         }
 
@@ -31,15 +31,15 @@
     .carousel-slides {
         margin-top: 90px;
 
-        @include respond-to('tablet-portait') {
-            margin-top: 56px;
+        @include respond-to('tablet-portrait') {
+            margin-top: 35px;
         }
     
         /* Slides */
         .slick-slide {
             padding: 20px 10px;
 
-            @include respond-to('tablet-portait') {
+            @include respond-to('tablet-portrait') {
                 padding: 20px;
             }
 
@@ -57,7 +57,7 @@
                 align-items: center;
                 justify-content: space-between;
 
-                @include respond-to('tablet-portait') {
+                @include respond-to('tablet-portrait') {
                     padding: 61px 32px 48px;
                 }
     
@@ -71,7 +71,7 @@
                     img {
                         width: 252px;
 
-                        @include respond-to('tablet-portait') {
+                        @include respond-to('tablet-portrait') {
                             width: 209px;
                         }
 
@@ -104,7 +104,7 @@
             @include respond-to('lg-desktop') {
                 left: -20px;
             }
-            @include respond-to('tablet-portait') {
+            @include respond-to('tablet-portrait') {
                 left: -3px;
             }
             @include respond-to('phone') {
@@ -119,7 +119,7 @@
             @include respond-to('lg-desktop') {
                 right: -20px;
             }
-            @include respond-to('tablet-portait') {
+            @include respond-to('tablet-portrait') {
                 right: -3px;
             }
             @include respond-to('phone') {
