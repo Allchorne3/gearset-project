@@ -11,6 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const header = $('header');
 
+// Add a shadow to header
 function headerScrolled() {
     if($(window).scrollTop() > 50) {
         header.addClass('scrolled')
@@ -22,6 +23,7 @@ function headerScrolled() {
 $(document).ready(function(){
     headerScrolled()
 
+    // Hero Image moves on mousemove
     $('body').on("mousemove", function(e){
       const speed = 80
       const mouseX = (e.pageX / speed)
@@ -51,16 +53,16 @@ $(document).ready(function(){
         responsive: [
             {
               breakpoint: 1150,
-              settings: {
+                settings: {
                 slidesToShow: 2
               }
             },
             {
-                breakpoint: 800,
+              breakpoint: 800,
                 settings: {
-                  slidesToShow: 1
-                }
+                slidesToShow: 1
               }
+            }
           ]
     });
 

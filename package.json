@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "description": "Basic Webpack Template",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack serve",
-    "build": "NODE_ENV=production && webpack",
-    "build-dev": "webpack"
+    "dev": "webpack serve --config webpack.dev.js",
+    "build-dev": "webpack build --config webpack.dev.js",
+    "build-prod": "webpack build --config webpack.prod.js"
   },
   "keywords": [],
   "author": "Stefan Allchorne",
@@ -31,6 +30,7 @@
     "style-loader": "^3.3.1",
     "webpack": "^5.72.1",
     "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.9.0"
+    "webpack-dev-server": "^4.9.0",
+    "webpack-merge": "^5.8.0"
   }
 }
