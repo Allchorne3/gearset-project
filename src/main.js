@@ -83,7 +83,7 @@ $(document).ready(function(){
       
       // About Us
     let tl1 = gsap.timeline({
-      scrollTrigger: {trigger: '#about-us', start: "center bottom"}
+      scrollTrigger: {trigger: '#about-us', start: "20% bottom"}
     })
     tl1.to(".about-us_content-left figure", {clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',transform: 'scale(1)', duration: 1})
        .from(".about-us_content-left figure img", {transform: 'scale(1.4)', duration: 2}, "-=1.3")
@@ -92,7 +92,7 @@ $(document).ready(function(){
           
       // DevOps Standards
     let tl2 = gsap.timeline({
-        scrollTrigger: {trigger: '#devops-standards', start: "10% bottom"}
+        scrollTrigger: {trigger: '#devops-standards', start: "20% bottom"}
     })
     tl2.from("#devops-standards .container--small h2", { y: 20, opacity: 0, duration: 0.7})
        .from("#devops-standards .container--small p", { y: 20, opacity: 0, duration: 0.7}, "-=0.3")
