@@ -37,4 +37,4 @@ npm run build-prod (Creates an minified version of the build)
 ```
 <br>
 
-> **Extra:** this website is also hosted via netlify. Once you push any changes to the github repo, the live website will automatically update via the "npm run build-prod" script found in package.json. You can view the website [Click here](https://allchorne-gs-assessment.netlify.app).<br><br> Or visit: https://allchorne-gs-assessment.netlify.app
+> **Extra:** this website is also hosted via netlify. Once you push any changes to the github repo, the live website will automatically update via the "npm run build-prod" script found in package.json. You can view the website on your phone if you [Click here](https://allchorne-gs-assessment.netlify.app).<br><br> Or visit: https://allchorne-gs-assessment.netlify.app
