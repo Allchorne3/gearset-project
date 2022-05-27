@@ -15,13 +15,12 @@ Install the dependencies by opening the project folder in the terminal and write
 ```
 npm i
 ```
---- 
 <br>
 
 ### **Step 2: You can start this website in 2 ways. Development mode or production mode:**
 
 ### Development Mode:
- - To view the website in the browser, use the following command in the Terminal
+ - This uses hot module reploading (HMR). To view the website in the browser, use the following command in the Terminal
 
 ```
 npm run dev
