@@ -2,7 +2,7 @@
 
 #about-us {
     background-color: $clr-faded-turquoise;
-    padding: 72px 32px;
+    padding: 72px 32px 10px;
 
     @include respond-to('tablet') {
         padding: 0;
@@ -60,5 +60,28 @@
             
         }
 
+    }
+
+    .about-us_content-lower {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+
+        .content-lower-left, .content-lower-right {
+            flex: 1;
+
+            img {
+                @include respond-to('phone') {
+                    max-width: 100%;
+                    width: 196px;
+                    object-fit: contain;
+                }
+            }
+        }
+
+        .content-lower-left {
+            // display: flex;
+            align-content: flex-end;
+        }
     }
 }
