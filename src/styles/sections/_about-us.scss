@@ -66,8 +66,10 @@
         display: flex;
         justify-content: space-between;
         flex-direction: row;
+        gap: 10px;
 
         .content-lower-left, .content-lower-right {
+            
             flex: 1;
 
             img {
